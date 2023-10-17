@@ -1,14 +1,54 @@
 fun main(args: Array<String>) {
+
+//    val age: Int = 10
+//    var name: String = " Hai"
+//    println("age : ${age + 10} | name :$name")
+//    println("${age::class.java}")
+//    println("${name::class.java}")
 //    val b: Double = 6.0
 //    val c: Float = 0f
-//    var a:Boolean = true
-//    println("${a::class.java}")
-//    var result = b + c
-//    println(result)
+//    var a: Boolean = true
+//    var number = 10
+//    number++
+//    number--
+//    number *= 3
+//    number /= 3
 
     // Viết chương trình tính thể tích hình cầu với radius = 5
     // Công thức : (4/3) * PI * radius^3
-    //    volumeSphere()
+//    volumeSphere()
+
+//    println("Please enter number : ")
+//    val newNumber = readln().toInt()
+//    println(newNumber)
+
+//    val listDemo = listOf("a", "b", "c")
+//    val listDemo2 = mutableListOf("a", "b", "c")
+//    listDemo2.add("d")
+
+    /*    println(listDemo)
+        println(listDemo2)
+        println(listDemo2[0])
+
+        println(listDemo.count())*/
+
+//    for (i in listDemo2) {
+//        println(i)
+//    }
+//
+//    for (i in listDemo2.indices) {
+//        println(listDemo2[i])
+//    }
+//    var input = 0
+//    do {
+//        println("Enter number : ")
+//        input = readln().toInt()
+//    } while (input < 10)
+//
+//    when (input) {
+//        0 -> print(0)
+//        1 -> println(1)
+//    }
 
     //Viết chương trình kiểm xem một chuỗi có thể đọc ngược và xuôi giống nhau k
     //Ví dụ Madam , ABABA,...
@@ -45,6 +85,8 @@ fun main(args: Array<String>) {
     // 1,5,4,3,2
     // 1,5,2,4,3
 
+//    forDemo()
+
 //    alertArray()
 //    println("Enter number ")
 //    val input = readln().toInt()
@@ -61,43 +103,62 @@ fun main(args: Array<String>) {
 
 //    println(integers.sorted())
 
-    val rectangle = Rectangle(10.0, 5.0)
-//    println("Area is ${rectangle.area()}")
-//    println("Perimeter is ${rectangle.perimeter()}")
+//    val rectangle = Rectangle(10.0, 5.0)
+////    println("Area is ${rectangle.area()}")
+////    println("Perimeter is ${rectangle.perimeter()}")
+////
+////
+//    val rectangle2 = Rectangle(2)
+////    println("Area is ${rectangle2.area()}")
+////
+//    val circle = Circle(5.0)
+////    println("Area ${circle.area()} | Perimeter ${circle.perimeter()}")
+////    println(circle.name)
+////
+//    val randomCircle = Circle.randomCircle()
+////    println("Area ${randomCircle.area()} | Perimeter ${randomCircle.perimeter()}")
+////
+//    val triangle = Triangle(2.0, 3.0, 4.0)
+////    println("Area ${triangle.area()} | Perimeter ${triangle.perimeter()}")
 //
+////    val name = "Hai"
+////    println(name.concatString("Pham"))
+////
+////    val number = 5
+////    println(number.concatString(10))
+//    val listShape = listOf(rectangle, rectangle2, circle, randomCircle, triangle)
 //
-    val rectangle2 = Rectangle(2)
-//    println("Area is ${rectangle2.area()}")
-//
-    val circle = Circle(5.0)
-//    println("Area ${circle.area()} | Perimeter ${circle.perimeter()}")
-//    println(circle.name)
-//
-    val randomCircle = Circle.randomCircle()
-//    println("Area ${randomCircle.area()} | Perimeter ${randomCircle.perimeter()}")
-//
-    val triangle = Triangle(2.0, 3.0, 4.0)
-//    println("Area ${triangle.area()} | Perimeter ${triangle.perimeter()}")
+//    val a = 5
+//    val b = 10
 
-//    val name = "Hai"
-//    println(name.concatString("Pham"))
+//    val sum: (Int, Int) -> Int = ::add
+//    println(sum(a, b))
 //
-//    val number = 5
-//    println(number.concatString(10))
-    val listShape = listOf(rectangle, rectangle2, circle, randomCircle, triangle)
+//    val c = 10
+//    val check: (Int) -> Boolean = ::isOdd
+//    println("Check ${check(c)}")
+//
+//    val integers = (1..20).toList()
+//    println(integers.filter(::isOdd))
 
-    val a = 5
-    val b = 10
+//    val number = 7
+//    println("is prime = $number.isPrime()")
+//
+//    val listInt = listOf(1,2,3,4,5,6,7,8,9,10)
+//    println(listInt.getMax())
+//    alertArray()
+//    println(message("Hello","18/10"))
 
-    val sum: (Int, Int) -> Int = ::add
-    println(sum(a, b))
+    val studentOne = Student(firstName = "Pham", lastName = "Hai")
+    studentOne.age = 26
+    println(studentOne.checkIsChild())
 
-    val c = 10
-    val check: (Int) -> Boolean = ::isOdd
-    println("Check ${check(c)}")
+    Circle.randomCircle()
+}
 
-    val integers = (1..20).toList()
-    println(integers.filter(::isOdd))
+
+private fun message(message: String, date: String = "17/10"): String {
+    return "message $message $date"
 }
 
 fun add(a: Int, b: Int) = a + b;
@@ -129,6 +190,8 @@ fun Int.isPrime(): Boolean {
     return true
 }
 
+
+private fun checkIsOdd(number: Int): Boolean = number % 2 == 0
 
 fun forDemo() {
     val array2 = arrayOf("Hello", "i'm", "Hải", 1, 2, 3, 4)
@@ -180,8 +243,6 @@ fun fibonacci() {
         list.add(list[i - 1] + list[i - 2])
     }
     println(list)
-
-
 }
 
 fun whileDemo() {
